@@ -6,9 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Introdução ao DOM</h1>
-    <p>Aqui temos um parágrafo</p>
-    <p>Utilizando DOM com JavaScript</p>
-    <div class = "classe1">clique aqui</div>
+    <h1>Acessando elementos DOM</h1>
+    <p name = "paragrafo">Aqui temos o primeiro parágrafo</p>
+    <p name = "paragrafo">Aqui temos o segundo parágrafo</p>
+    <div id = "minhaDiv">Minha Div</div>
+    <br>
+
+    <script>
+        var p1 = document.getElementsByTagName ('p')[0];
+        document.write(p1.innerText);
+        var d = document.getElementById("minhaDiv");
+        d.innerText = "Modificando a Div";
+        var p = document.getElementsByName("paragrafo")[1];
+        p.style.background = "blue";
+    </script>
 </body>
 </html>
